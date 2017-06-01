@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="text-vertical-center">
+    <h1>Matt Thoman</h1>
+    <h3> Software Developer, Jeep Enthusiast &amp; Human Authority Figure</h3>
+    <br>
+    @*below creates an accordian which holds the form for updating/adding user profile info*@
+    <div id="override-bootstrap">
+        <div class="panel-group" id="infoaccordian" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a href="#test1" role="button" data-toggle="collapse" data-parent="#infoaccordian" aria-expanded="false" aria-controls="test1">Find Out More</a>
+                    </h4>
+                </div><!--panel-heading-->
+                <div class="panel-collapse collapse" id="test1" role="tabpanel" arialabelledby="headingOne">
+                    <div class="panel-body">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                @Html.ActionLink("About Me", "About", "Home")
+                            </div>
+
+                            <div class="form-group">
+                                @Html.ActionLink("My Skills", "Skills", "Home")
+                            </div>
+
+                            <div class="form-group">
+                                @Html.ActionLink("My Portfolio", "Portfolio", "Home")
+                            </div>
+
+                            <div class="form-group">
+                                @Html.ActionLink("Contact Info", "Contact", "Home")
+                            </div>
+                        </div>
+                    </div><!--panel body-->
+                </div><!--panel collapse-->
+            </div><!--panel-->
+        </div>
+    </div>
+    @*<a href="../Home/About" class="btn btn-dark btn-lg">Find Out More</a>*@
+</div>
