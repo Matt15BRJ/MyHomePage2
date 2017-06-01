@@ -2,6 +2,103 @@
 @{
     ViewBag.Title = "Portfolio";
 }
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<style>
+    #myportfolio {
+        margin: 0;
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
-<h2>Portfolio</h2>
+    #myportfolio h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 4.5em;
+        font-weight: 700;
+        text-align: center;
+    }
+    #myportfolio h2 {
+        margin:0;
+        padding:0;
+        text-align:center;
+    }
 
+    #myportfolio button {
+        margin: 5px;
+    }
+
+    #buttoncontainer1 {       
+        position:relative;
+        text-align: center;
+    }
+
+    #buttoncontainer2 {        
+        position:relative;
+        text-align:center
+    }
+</style>
+
+<div id="myportfolio">
+    <h1>My Portfolio</h1>
+    <h2>Some of the projects I've worked on</h2><br/>
+    <div id="buttoncontainer1">
+        <button type="button" class="btn btn-warning jobpdx">JobPDX Website</button>
+        <button type="button" class="btn btn-warning slots">Slot Machine web app</button>
+        <button type="button" class="btn btn-warning filemover">File moving app</button>
+    </div>
+    <div id="buttoncontainer2">
+        <button type="button" class="btn btn-warning pizza">Pizza website</button>
+        <button type="button" class="btn btn-warning todo">To Do list app</button>
+        <button type="button" class="btn btn-warning library">SQL Library</button>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/bootbox.min.js"></script>
+<script>
+    $(document).on("click", ".jobpdx", function (e) {
+        bootbox.alert({
+            title: "JobPdx.com Website",
+            message: "I designed and built the user profile section of the JobPDX.com website, using HTML, CSS, C#, SQL, ASP.NET MVC and Entity Framework, while working in an Agile/Scrum team environment. <a href='https://jobpdx.com'>JobPDX.com</a> | <a href='https://github.com/Matt15BRJ/Tech-Academy-Projects'>View code on github</a>",
+            backdrop: true
+        });
+    });
+    $(document).on("click", ".slots", function (e) {
+        bootbox.alert({
+            title: "Slot Machine Web App",
+            message: "Using ASP.NET, C#, HTML, and CSS I built a Web Application that simulates a basic 3 reel slot machine. <a href='https://github.com/Matt15BRJ/SlotMachine'>View code on github</a> ",
+            backdrop: true
+        });
+    });
+    $(document).on("click", ".filemover", function (e) {
+        bootbox.alert({
+            title: "File moving app",
+            message: "Using Python I built an app that allows the user to chose a folder on their computer to check for files that have been updated within the last 24 hours and move them to a new folder that they designate. <a href='https://github.com/Matt15BRJ/filemover'>View code on github</a> ",
+            backdrop: true
+        });
+    });
+    $(document).on("click", ".pizza", function (e) {
+        bootbox.alert({
+            title: "Practice Pizza website",
+            message: "Using HTML, CSS, JQuery, and Bootstrap I designed and built a demo pizza website where a user can 'build and order' a pizza.  <a href='https://github.com/Matt15BRJ/pizzaproject'>View code on github</a> ",
+            backdrop: true
+        });
+    });
+    $(document).on("click", ".todo", function (e) {
+        bootbox.alert({
+            title: "To Do List App",
+            message: "Using C#, SQL, Entity Framework, HTML, CSS, and Knockout.js I built an App that lets a user create a todo list and check things off as they go. I will be adding in a time tracking function eventually, to allow the user to track how much time they spend on a given task.  <a href='https://github.com/Matt15BRJ/KnockoutApp3'>View code on github</a> ",
+            backdrop: true
+        });
+    });
+    $(document).on("click", ".library", function (e) {
+        bootbox.alert({
+            title: "To Do List App",
+            message: "Using SQL I created a Library database for a fictional county library system. I then created several query strings to check things like: Which members have books checked out; How many books are checked out by branch; How many copies of a book are at a given branch; and Checking for books that are due by branch and date.  <a href='https://github.com/Matt15BRJ/MattCoLibrary'>View code on github</a> ",
+            backdrop: true
+        });
+    });
+</script>
